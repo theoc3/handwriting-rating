@@ -18,7 +18,7 @@ ap.add_argument("-l", "--langs", type=str, default="ja",
 ap.add_argument("-g", "--gpu", type=int, default=-1,
                 help="whether or not GPU should be used")
 ap.add_argument("-k", "--kana", type=str, default="1",
-                help="whether or not only kana should be read")
+                help="list of kana to OCR")
 args = vars(ap.parse_args())
 
 # break the input languages into a comma separated list
@@ -35,13 +35,14 @@ print("[INFO] OCR'ing input image...")
 higragana = "あいうえおかきくけこさしすせそたちつてとなにぬねのはひふへほまみむめもやゆよらりるれろわをん"  
 katakana = "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン"
 
+
 # specify use of japanese_g2
 reader = Reader(langs, gpu=args["gpu"] > 0, recog_network='japanese_g2')
 # only read kana if specified
 if args["kana"] == "1":
-    results = reader.readtext(image,slope_ths=0,ycenter_ths=0,height_ths=0,width_ths=0,allowlist=higragana+katakana)
+    results = reader.readtext(image,slope_ths=0,ycenter_ths=0,height_ths=0,width_ths=0,allowlist=higragana+katakana,text_threshold=0.3,low_text=0.2)
 else:
-    results = reader.readtext(image,slope_ths=0,ycenter_ths=0,height_ths=0,width_ths=0)
+    results = reader.readtext(image,slope_ths=0,ycenter_ths=0,height_ths=0,width_ths=0,allowlist=args["kana"],text_threshold=0.3,low_text=0.2)
 
 
 # loop over the results
@@ -60,7 +61,7 @@ for (bbox, text, prob) in results:
     # with the OCR'd text itself
     text = clean_text(text)
     cv2.rectangle(image, tl, br, (0, 255, 0), 2)
-    cv2.putText(image, text+str(round(prob,2)), (bl[0], bl[1]-30), cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0, 0, 255), 2)
+    cv2.putText(image, text+str(round((prob**10)*100,2)), (bl[0], bl[1]-30), cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0, 0, 255), 2)
     
 # show output image
 cv2.imshow("Image", image)
