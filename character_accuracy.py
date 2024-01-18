@@ -1,5 +1,5 @@
-# command usage
-# python character_accuracy.py --image images/1.png -- langs en,jp
+# command usage for mac
+# python3 character_accuracy.py --image images/1.png --langs ja
 
 from easyocr import Reader
 import argparse
@@ -28,8 +28,12 @@ image = cv2.imread(args["image"])
 
 # OCR the input image using EasyOCR
 print("[INFO] OCR'ing input image...")
-reader = Reader(langs, gpu=args["gpu"] > 0)
+
+# specify use of japanese_g2
+reader = Reader(langs, gpu=args["gpu"] > 0, recog_network='japanese_g2')
 results = reader.readtext(image)
+
+
 
 # loop over the results
 for (bbox, text, prob) in results:
