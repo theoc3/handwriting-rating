@@ -21,6 +21,8 @@
  
  --kana if kana should be used, 1 or -1
 
+ Tthe text needs to be spread out if you want individual ratings on each character. Additionally, very poorly written ones will likely not be rated at all, support for specific character recognition will be added soon.
+
  ## Result
   Draws bounding boxes with confidence numbers (essentially a score on your writing) over text. 
 
@@ -31,6 +33,8 @@
 
  ## Currently working on...
   Custom EasyOCR model trained on actual handwriting data
+
+  Specific character support for more obvious and direct feedback.
 
   Integration with  <a href="https://github.com/theoc3/JapanesePractice" target="_blank" rel="noopener noreferrer">Practice python script</a>, so individual characters can be tested for exact confidence levels on an assigned character
 
