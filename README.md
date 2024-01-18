@@ -21,7 +21,13 @@
  
  --kana if kana should be used, 1 or -1
 
- Tthe text needs to be spread out if you want individual ratings on each character. Additionally, very poorly written ones will likely not be rated at all, support for specific character recognition will be added soon. The downside right now is that in the event a character just can't be recognized, it will be recognized incorrectly, given a wrong rating, or it won't be rated at all.
+### Input Image
+
+ The text needs to be spread out if you want individual ratings on each character. 
+ 
+ Very poorly written ones will likely not be rated at all, support for specific character recognition will be added soon. The downside right now is that in the event a character just can't be recognized, it will be recognized incorrectly, given a wrong rating, or it won't be rated at all.
+
+ Input image will need to have high contrast, pencil on paper will need to be dark pencil lead on white paper. If not, simply edit the photo.
 
  ## Result
   Draws bounding boxes with confidence numbers (essentially a score on your writing) over text. 
