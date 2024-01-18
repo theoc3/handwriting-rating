@@ -60,7 +60,7 @@ for (bbox, text, prob) in results:
     # with the OCR'd text itself
     text = clean_text(text)
     cv2.rectangle(image, tl, br, (0, 255, 0), 2)
-    cv2.putText(image, text+str(round(prob,2)), (bl[0], bl[1]-30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
+    cv2.putText(image, text+str(round(prob,2)), (bl[0], bl[1]-30), cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0, 0, 255), 2)
     
 # show output image
 cv2.imshow("Image", image)
