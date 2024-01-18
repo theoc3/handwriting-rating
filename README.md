@@ -8,7 +8,7 @@
  Code based off tutorial from <a href="https://talcgames.itch.io/](https://www.youtube.com/watch?v=fGP_sSo-usc" target="_blank" rel="noopener noreferrer">PyImageSearch</a>
 
 ## Dataset/Model
- <a href="[https://github.com/Nexdata-AI/101-People-4538-Images-Japanese-Handwriting-OCR-Data](https://jaided.ai/easyocr/modelhub/)" target="_blank" rel="noopener noreferrer">Default EasyOCR japanese_g2 model</a>
+ <a href="https://jaided.ai/easyocr/modelhub/" target="_blank" rel="noopener noreferrer">Default EasyOCR japanese_g2 model</a>
 
 ## Usage
  python3 character_accuracy.py --image images/1.png --g 1 --langs ja --kana 1 
