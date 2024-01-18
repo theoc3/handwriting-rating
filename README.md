@@ -20,7 +20,7 @@
  
  --langs specify languages, normally just use ja
  
- --kana if kana should be used, 1 or -1
+ --kana if kana should be used, 1 or kana to be checked i.e. あ
 
 ### Input Image
 
