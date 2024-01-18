@@ -1,5 +1,5 @@
 # command usage for mac
-# python3 character_accuracy.py --image images/1.png --langs ja --kana 1
+# python3 character_accuracy.py --image images/1.png --langs ja --kana 1 --g 1
 
 from easyocr import Reader
 import argparse
@@ -13,7 +13,7 @@ def clean_text(text):
 ap = argparse.ArgumentParser()
 ap.add_argument("-i", "--image", required=True,
                 help="path to input image to be OCR'd")
-ap.add_argument("-l", "--langs", type=str, default="en",
+ap.add_argument("-l", "--langs", type=str, default="ja",
                 help="comma separated list of languages to OCR")
 ap.add_argument("-g", "--gpu", type=int, default=-1,
                 help="whether or not GPU should be used")
