@@ -11,6 +11,7 @@
  <a href="https://jaided.ai/easyocr/modelhub/" target="_blank" rel="noopener noreferrer">Default EasyOCR japanese_g2 model</a>
 
 ## Usage
+### Command
  python3 character_accuracy.py --image images/1.png --g 1 --langs ja --kana 1 
 
  --image specify image
