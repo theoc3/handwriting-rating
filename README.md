@@ -26,12 +26,16 @@
 
   Returns list of text and confidence values in terminal. 
 
+![Screenshot](result.png)
+![Screenshot](console.png)
+
  ## Currently working on...
   Custom EasyOCR model trained on actual handwriting data
 
   Integration with  <a href="https://github.com/theoc3/JapanesePractice" target="_blank" rel="noopener noreferrer">Practice python script</a>, so individual characters can be tested for exact confidence levels on an assigned character
 
   Detected text written onto image (OpenCV does not natively support)
+
 
   
  
