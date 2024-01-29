@@ -35,21 +35,18 @@
 
   Returns list of text and confidence values in terminal. 
 
+  Result from this command:
+  
+  python3 character_accuracy.py --image images/handwritten.jpg --g 1 --langs ja --kana あ 
+
 ![Screenshot](result.png)
 ![Screenshot](console.png)
 
  ## Currently working on...
   Custom EasyOCR model trained on actual handwriting data
 
-  Specific character support for more clear feedback.
-
   Integration with  <a href="https://github.com/theoc3/JapanesePractice" target="_blank" rel="noopener noreferrer">Practice python script</a>, so individual characters can be tested for exact confidence levels on an assigned character
 
-  Detected text written onto image (OpenCV does not natively support)
+  Detected text written onto image (OpenCV does not natively support non-latin text)
 
-  More detailed feedback information in the console. 
-
-
-  
- 
-
+  More detailed feedback information in the console.
