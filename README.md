@@ -5,7 +5,7 @@
 
  Currently using default japanese_g2, which is trained on non-handwritten text. 
  
- Code based off tutorial from <a href="https://talcgames.itch.io/](https://www.youtube.com/watch?v=fGP_sSo-usc" target="_blank" rel="noopener noreferrer">PyImageSearch</a>
+ Code initially based off tutorial from <a href="https://talcgames.itch.io/](https://www.youtube.com/watch?v=fGP_sSo-usc" target="_blank" rel="noopener noreferrer">PyImageSearch</a>
 
 ## Dataset/Model
  <a href="https://jaided.ai/easyocr/modelhub/" target="_blank" rel="noopener noreferrer">Default EasyOCR japanese_g2 model</a>
